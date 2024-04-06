@@ -4,27 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Notes</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="all">
-        <div class="date-time" id="date-time">Current date and time</div>
-        <div class="dp"><img src="user.png" alt="Profile Picture" id="profile-pic"></div>  
-      
+        <div class="dp"><img src="user.png" alt="Profile Picture" id="profile-pic"></div>
+        <div class="date-time" id="date-time">Current date<bR> and time</div>
         <main class="notes">
             <!-- Notes go here -->
             <textarea id="note-input" placeholder="Write your notes here..."></textarea>
             <button id="add-note">Add Note</button> <!-- Add a button to add new notes -->
+            <div class="written-notes" id="written-notes">
+            </div>
         </main>
-
-        <div class="written-notes" id="written-notes">
             <!-- Written notes will be displayed here -->
-        </div>
-
+    
         <nav>
             <a href="#" class="icons"><img src="home.png" alt="Icon 1"></a>
             <a href="#" class="icons"><img src="add.png" alt="Icon 2"></a>
-            <a href="#" class="icons"><img src="user.png" alt="Icon 3"></a>
+            <a href="profile.html" class="icons"><img src="user.png" alt="Icon 3"></a>
             <!-- Add more icons as needed -->
         </nav>
     </div>
