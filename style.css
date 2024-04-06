@@ -3,85 +3,91 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #01c27817;
 }
-
 .all {
     display: flex;
     flex-direction: column;
     height: 100%;
-   
 }
-
-.date-time {
-    color: #000000;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
 .dp {
-    margin-top: 10px;
-    margin-right: 10px;
-    align-self: flex-end;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1; 
 }
 
 .dp img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 40px;
+    height: 40px;
+    border-radius: 55%;
+    box-shadow: 0 4px 6px rgba(2, 33, 33, 0.967), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+.date-time {
+    font-family: "Crimson Pro", serif;;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Ensure the date-time stays above other content */
+    color: #000000;
+}
 .notes {
-    position: relative;
+    padding-top: 40px;
+    position: relative ;
     flex-grow: 1;
 }
-
 textarea {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
     margin: 10px;
     padding: 15px;
     border: none;
     resize: none;
     font-size: 16px;
-    background-color: #e0e0e0;
+    background-color: #1a0564ef;
     border-radius: 10px;
     box-shadow: 4px 4px 8px #b3b3b3, -4px -4px 8px #ffffff;
 }
-
 button {
     margin: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #3d3e37;
+    background-color: #3f0707;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 4px 4px 8px #b3b3b3, -4px -4px 8px #ffffff;
 }
-
 .written-notes {
     margin-top: 10px;
     padding: 10px;
-    border-top: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     overflow-y: auto;
     flex-grow: 1;
 }
-
+.note {
+    background-color: #3a030358;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 8px #023b34, -4px -4px 8px #64171722;
+}
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #e5e4e2; 
+    background-color: #023b3134; 
     height: 60px;
-    box-shadow: 0px -4px 8px #b3b3b3;
-    position: fixed bottom;
+    box-shadow: 0px -4px 8px #02564034;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-
 .icons {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,3 +98,19 @@ nav {
     max-width: 24px;
     max-height: 24px;
 }
+.written-notes {
+    
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow-y: auto; 
+    max-height: calc(100% - 50px); 
+}
+
+/* Additional styles for scrollbar */
+.written-notes::-webkit-scrollbar {
+    width: 8px;
+} 
+
